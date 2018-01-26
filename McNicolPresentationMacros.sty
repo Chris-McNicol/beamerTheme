@@ -1,0 +1,25 @@
+\ProvidesPackage{McNicolPresentationMacros}[2017/01/05 Macros for standard presentations]
+
+
+
+
+
+% Make a nice, pretty title slide at the start of the 
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+% Make a title slide graphics with 2 images and their sizes
+\newcommand{\makemyTitle}[4]{\titlegraphic{%
+  \mbox{}%
+  \llap{\includegraphics[scale=#2]{#1}\qquad}%
+  \rlap{\qquad\includegraphics[scale=#4]{#3}}}
+
+  }
